@@ -1,0 +1,84 @@
+var=2k15
+va=2k15
+v="$va"
+echo "$v"
+n=7
+m=5
+#################
+if [ $n = $m ]
+then 
+	echo "true"
+else
+	echo "false"
+fi
+#################
+if [ $n -eq $m ]
+then 
+	echo "equal"
+else
+	echo "not equal"
+fi
+#################
+if [ $n -ne $m ]		
+then
+	echo "not equal"
+else 
+	echo " equal"
+fi	
+#################
+if [ $n -ge $m ]		
+then
+	echo "greater equal"
+else 
+	echo "less"
+fi	
+#################
+if [ $n -lt $m ]		
+then
+	echo " less than"
+else 
+	echo "not less than"
+fi	
+#################
+if [ "$var" = "$v" ]		
+then
+	echo " string equal"
+else 
+	echo "string not equal"
+fi
+#################
+echo "Enter a mark : "
+read val
+if [ $val -ge 80 ]
+then 
+	echo "A+"
+elif [ $val -gt 70 ]
+then
+	echo "A"
+elif [ $val -ge 60 ]
+then
+	echo "A-"
+elif [ $val -ge 50 ]
+then
+	echo "B"
+else
+	echo "not good"
+fi
+#################
+echo "Enter a Leap year: "
+read ans
+if [  [$[ ans%4 ] == 0 ]  &&  [$[ ans%100 ] != 0 ]  ]
+then
+	echo "Leap year"
+elif [ $[ ans%400 ] == 0 ]
+then
+	echo "Leap year"
+else 
+echo "not Leap year"
+fi	
+#################
+
+
+
+
+
