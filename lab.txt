@@ -1,0 +1,66 @@
+#read val
+val=89
+case $val in 
+	8[0-9]) echo "A+" ;;
+	7[0-9]) echo "A" ;;
+	6[0-9]) echo "A-" ;;
+	D) echo "B" ;;
+	4[0-9]) echo "C";;
+	3[0-9]) echo "D" ;;
+	esac
+################	
+#read val2
+val2=D
+case $val2 in 
+	A) echo "A" ;;
+	B) echo "B" ;;
+	C) echo "C" ;;
+	D) echo "D" ;;
+	E) echo "E"	;;
+	F) echo "F" ;;
+	esac
+################	
+arr[0]=100
+arr[1]=110
+arr[2]=150
+arr[3]=160
+arr[4]=180
+echo ${arr[0]}
+echo ${arr[*]}
+################
+sum=0
+for v in ${arr[*]}
+do 
+	sum=$[$sum + $v]
+done
+echo "for loop: "	
+echo "sum: $sum"
+################
+echo "for loop: "
+for (( i = 0; i < 10; i++ )); do
+	arr2[$i]=$[$i+1]
+done
+echo "arr2: ${arr2[*]}";
+################
+i=1
+n=10
+echo "While loop: "
+while [[ $i -le 10 ]]; do
+	echo "$i"
+	i=$[$i+1];
+done
+################
+function name()
+{
+	echo "function call: parameter pass($1 and $2)"
+	return
+}
+name piyal Barrat
+################
+echo "string operation: "
+str="this is a string"
+len=${#str}
+echo "string length: $len"
+substr=${str:5:2}
+echo "substring: $substr"
+################
